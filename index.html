@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNB Investment Credit Card</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .component-sub-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px 30px;
+            background: var(--Grey-Background, #f8f8f8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .menu-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-left: 10px;
+        }
+
+        .menu-icons div {
+            font-size: 24px;
+            cursor: pointer;
+            color: black;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        .login {
+            font-size: 1rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            padding-right: 10px;
+        }
+
+        .card-box {
+            width: 80%;
+            max-width: 300px;
+            aspect-ratio: 1.586;
+            position: relative;
+            perspective: 1000px;
+            margin: 40px auto; /* Added more spacing */
+        }
+
+        .credit-card {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #006400, #2e8b57);
+            box-shadow: 0 10px 20px rgba(0, 128, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            font-size: 0.9rem;
+            animation: rotateCard 5s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .credit-card .number {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .credit-card .name {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .credit-card .expiry {
+            font-size: 0.8rem;
+        }
+
+        .actions {
+            margin-top: 30px; /* Increased spacing */
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Increased gap between buttons */
+        }
+
+        .button {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: white;
+            background: #006400;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #004d00;
+        }
+
+        .features-box {
+            width: 90%;
+            max-width: 1100px;
+            height: 600px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            margin: 60px auto; /* Increased spacing above features */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .swiper-container {
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .swiper-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .feature-box {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 300px;
+            height: 90%;
+            overflow: hidden;
+            background: #f8f8f8;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            scroll-snap-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px; /* Added margin between features */
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-box img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover img {
+            transform: translateY(-5px);
+        }
+
+        .feature-box p {
+            font-size: 0.9rem;
+            color: #333;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        @keyframes rotateCard {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="component-sub-content">
+        <div class="menu-icons">
+            <div>☰</div>
+            <div>🌐</div>
+        </div>
+        <div class="logo">
+            <img src="assets/images/snb-logo.png" alt="SNB Logo">
+        </div>
+        <div class="login">Login</div>
+    </div>
+
+    <div class="card-box">
+        <div class="credit-card">
+            <div class="number">1234 5678 9012 3456</div>
+            <div class="name">Afnan</div>
+            <div class="expiry">Valid Thru: 12/26</div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a href="#" class="button">Apply Now</a>
+        <a href="#" class="button">Terms & Conditions</a>
+    </div>
+
+    <div class="features-box">
+        <div class="swiper-container" id="swiper-container">
+            <div class="feature-box">
+                <img src="assets/images/feature_01.png" alt="Feature 1">
+                <p>Earn reward points on every purchase with your Invest+ Card.</p>
+            </div>
+            <div class="feature-box">
+                <img src="assets/images/feature_02.png" alt="Feature 2">
+                <p>Access to premium lounges at airports worldwide.</p>
+            </div>
+            <div class="feature-box">
+                <img src="assets/images/feature_03.png" alt="Feature 3">
+                <p>Exclusive discounts and offers on travel and dining.</p>
+            </div>
+            <div class="feature-box">
+                <img src="assets/images/feature_04.png" alt="Feature 4">
+                <p>Comprehensive fraud protection and purchase insurance.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
